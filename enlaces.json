@@ -1,0 +1,12 @@
+[
+  {
+    "url": "https://adf.ly/xyz123",
+    "tipo": "adfly",
+    "visitas": 0
+  },
+  {
+    "url": "https://shorte.st/abc456",
+    "tipo": "shorte",
+    "visitas": 0
+  }
+]

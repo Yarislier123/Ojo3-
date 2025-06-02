@@ -1,0 +1,2 @@
+# Agrega tus proxies uno por línea en formato:
+# http://usuario:pass@host:puerto

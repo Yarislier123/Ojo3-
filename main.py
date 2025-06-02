@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, render_template_string, flash, session, url_for
+lofrom flask import Flask, request, redirect, render_template_string, flash, session, url_for
 from threading import Thread
 import json
 import subprocess
@@ -256,15 +256,18 @@ def estadisticas():
     conteo_enlace=conteo_enlace,
     conteo_cuenta=conteo_cuenta)
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
-    services:
-  - type: web
-    name: bot-realista-monetizable
-    env: python
-    plan: free
-    buildCommand: "pip install -r requirements.txt"
+buildCommand: "pip install -r requirements.txt"
     startCommand: "python main.py"
     envVars:
       - key: PYTHON_VERSION
         value: "3.10"
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+  - type: web
+    name: bot-realista-monetizable
+    env: python
+    plan: free
+    

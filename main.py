@@ -258,3 +258,13 @@ def estadisticas():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+    services:
+  - type: web
+    name: bot-realista-monetizable
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.10"
